@@ -1,7 +1,7 @@
 fastapi
 uvicorn[standard]
 transformers>=4.30
-torch  # or torch>=2.0.0; installing torch differs by platform
+torch>=2.0.0
 pydantic
 python-multipart
 gunicorn

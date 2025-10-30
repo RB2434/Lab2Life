@@ -192,3 +192,13 @@ def summarize(report: ReportIn):
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
+from fastapi.responses import HTMLResponse
+
+@app.get("/", response_class=HTMLResponse)
+def home():
+    return """
+    <h2>✅ Lab2Life API is Live!</h2>
+    <p>Use the <b>/summarize</b> endpoint via POST request.</p>
+    <p>Or open your frontend (index.html) locally and connect it to this link:</p>
+    <code>https://lab2life.onrender.com/summarize</code>
+    """
